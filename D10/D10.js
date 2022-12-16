@@ -522,6 +522,7 @@ console.log("------------------------------------- Exercise 20 -----------------
 const idSelector = () => {
   return document.getElementById("container");
 };
+console.log("Wont be displayed cause there's no actual interaction with a DOM");
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
@@ -531,6 +532,7 @@ const tdSelector = () => {
   return document.getElementsByTagName("td");
   //return document.querySelectorAll("td")
 };
+console.log("Wont be displayed cause there's no actual interaction with a DOM");
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
@@ -544,6 +546,7 @@ const tdPrinter = () => {
     console.log(element.value);
   });
 };
+console.log("Wont be displayed cause there's no actual interaction with a DOM");
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -557,6 +560,7 @@ const redPainter = () => {
     element.style.backgroundColor = red;
   });
 };
+console.log("Wont be displayed cause there's no actual interaction with a DOM");
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
@@ -567,6 +571,7 @@ const listItem = () => {
   const myNewListItem = document.createElement("li");
   document.getElementById("myList").appendChild(myNewListItem);
 };
+console.log("Wont be displayed cause there's no actual interaction with a DOM");
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
@@ -579,6 +584,7 @@ const myEmptyList = () => {
     myEmptyList.removeChild(myEmptyList.firstChild);
   }
 };
+console.log("Wont be displayed cause there's no actual interaction with a DOM");
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
@@ -592,6 +598,7 @@ const addAClass = () => {
     element.classList.add(".test");
   });
 };
+console.log("Wont be displayed cause there's no actual interaction with a DOM");
 
 // [EXTRA] JS Avanzato
 
