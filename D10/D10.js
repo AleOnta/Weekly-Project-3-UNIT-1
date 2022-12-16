@@ -49,20 +49,33 @@ console.log(me);
 */
 console.log("------------------------------------- Exercise D ------------------------------------");
 
+delete me.age;
+console.log(me);
+
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 console.log("------------------------------------- Exercise E ------------------------------------");
+
+me.skills = ["python", "javascript"];
+console.log(me);
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 console.log("------------------------------------- Exercise F ------------------------------------");
 
+me.skills.push("asMarkUp: CSS & HTML");
+console.log(me);
+
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 console.log("------------------------------------- Exercise G ------------------------------------");
+
+me.skills.pop();
+console.log(me);
+
 // Funzioni
 
 /* ESERCIZIO 1
