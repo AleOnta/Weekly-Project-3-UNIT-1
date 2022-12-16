@@ -245,16 +245,19 @@ console.log(resultObject);
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 console.log("------------------------------------- Exercise 9 ------------------------------------");
+// Spent some other times learning how date work on Js and i got able to write this.
+const theDate = new Date(2022, 00, 11);
 
-/*const datePast = new Date("January 11, 22:00:00");
+const howManyDays = (date) => {
+  const isToday = new Date();
 
-const howManyDays = function (date) {
-  const timePassed = date.now() - date.parse(date);
-  return timePassed / (1000 * 60 * 60 * 24);
+  let timeDifference = isToday.valueOf() - date.valueOf();
+  return (timeDifference /= 1000 * 60 * 60 * 24);
 };
 
-console.log(howManyDays(datePast));
-*/
+const theTimePassed = howManyDays(theDate);
+console.log("From the date you picked are passed:", Math.round(theTimePassed), "days");
+
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
