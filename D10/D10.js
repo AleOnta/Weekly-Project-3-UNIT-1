@@ -470,11 +470,13 @@ console.log("------------------------------------- Exercise 16 -----------------
 const sumAllTheYears = (array) => {
   let yearsSum = 0;
   array.forEach((element) => {
-    return (yearsSum += parseInt(element));
+    yearsSum += Number(element);
   });
+  return yearsSum;
 };
 
-console.log(sumAllTheYears(moviesYears));
+const sumOfAllYears = sumAllTheYears(moviesYears);
+console.log("The sum of all years is:", sumOfAllYears);
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
