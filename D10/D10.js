@@ -516,6 +516,12 @@ const redPainter = () => {
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 console.log("------------------------------------- Exercise 24 ------------------------------------");
+
+const listItem = () => {
+  const myNewListItem = document.createElement("li");
+  document.getElementById("myList").appendChild(myNewListItem);
+};
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
@@ -524,6 +530,14 @@ console.log("------------------------------------- Exercise 25 -----------------
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 console.log("------------------------------------- Exercise 26 ------------------------------------");
+
+const addAClass = () => {
+  myTrArray = document.getElementsByTagName("tr");
+  myTrArray.forEach((element) => {
+    element.classList.add(".test");
+  });
+};
+
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
