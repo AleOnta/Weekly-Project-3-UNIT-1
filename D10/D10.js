@@ -152,12 +152,11 @@ console.log(stringResult);
 console.log("------------------------------------- Exercise 5 ------------------------------------");
 
 const onlyLetters = function (string) {
-  const regex = /\d/;
-  let = indexOfNumber = string.search(regex);
-  return string.replace(indexOfNumber, "");
+  let = withNoDigits = string.replace(/[0-9]/g, "");
+  return withNoDigits;
 };
 
-const onlyLetterString = onlyLetters("Siamo in 4 in famiglia");
+const onlyLetterString = onlyLetters("We were looking for your 2 dogs");
 console.log(onlyLetterString);
 
 /* ESERCIZIO 6
