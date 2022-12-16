@@ -176,38 +176,39 @@ isThisAnEmail("ale-email@email.com");
 */
 console.log("------------------------------------- Exercise 7 ------------------------------------");
 
-const day = new Date("December 16, 2022 15:00:00");
+// after have cleared my mind on the Date() constructor and in general with this primitive data type, i'm now able to solve this exercise.
+
+const today = new Date();
+const daysOfTheWeek = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
 const whatDayIsIt = function (day) {
-  const weekday = day.getDay();
-
-  const daysOfTheWeek = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+  const weekday = today.getDay();
   switch (weekday) {
     case 1:
-      console.log("today is", daysOfTheWeek[0]);
+      console.log("today is -->", daysOfTheWeek[0]);
       break;
     case 2:
-      console.log("today is", daysOfTheWeek[1]);
+      console.log("today is -->", daysOfTheWeek[1]);
       break;
     case 3:
-      console.log("today is", daysOfTheWeek[2]);
+      console.log("today is -->", daysOfTheWeek[2]);
       break;
     case 4:
-      console.log("today is", daysOfTheWeek[3]);
+      console.log("today is -->", daysOfTheWeek[3]);
       break;
     case 5:
-      console.log("today is", daysOfTheWeek[4]);
+      console.log("today is -->", daysOfTheWeek[4]);
       break;
     case 6:
-      console.log("today is", daysOfTheWeek[5]);
+      console.log("today is -->", daysOfTheWeek[5]);
       break;
     default:
-      console.log("today is sunday");
+      console.log("today is --> sunday");
       break;
   }
 };
 
-whatDayIsIt(day);
+whatDayIsIt(today);
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -223,14 +224,23 @@ whatDayIsIt(day);
 */
 console.log("------------------------------------- Exercise 8 ------------------------------------");
 
-const rollTheDices = function (number) {
-  const diceResult = {};
-  let sum = [];
-  let values = [];
-  for (let i = 0; i < number; i++) {}
+const rollTheDices = (multiplier) => {
+  let theSum = 0;
+  const theAddends = [];
+  for (let i = 0; i < multiplier; i++) {
+    let theValue = dice();
+    theAddends.push(theValue);
+    theSum += theValue;
+  }
+  const rollTheDicesObject = {};
+  rollTheDicesObject.sum = theSum;
+  rollTheDicesObject.values = theAddends;
+  return rollTheDicesObject;
 };
 
-rollTheDices(5);
+const resultObject = rollTheDices(10);
+console.log(resultObject);
+
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
