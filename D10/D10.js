@@ -500,6 +500,19 @@ console.log("------------------------------------- Exercise 18 -----------------
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 console.log("------------------------------------- Exercise 19 ------------------------------------");
+
+const removeIndex = (value) => {
+  if (value > 13) {
+    console.log("please, insert a correct value, it should be a number in between of 1 and 13");
+  } else {
+    return movies.splice(value, 1);
+  }
+};
+
+const objectPopped = removeIndex(5);
+console.log("this is the object that just got deleted by the function:", objectPopped);
+//console.log(movies)  --> this is just an alternative way to check if the object got deleted, it's commented to not get a huge array inside the console.
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
