@@ -262,6 +262,24 @@ console.log("From the date you picked are passed:", Math.round(theTimePassed), "
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 console.log("------------------------------------- Exercise 10 ------------------------------------");
+
+const aDate = new Date(1999, 00, 11);
+
+const isTodayMyBirthday = (date) => {
+  const myBirthday = new Date(1999, 00, 11).valueOf();
+  const suspiciusDate = new Date(date).valueOf();
+  if (myBirthday - suspiciusDate === 0) {
+    return true;
+  } else {
+    console.log(myBirthday);
+    console.log(suspiciusDate);
+    return false;
+  }
+};
+
+const isTheSameDate = isTodayMyBirthday(aDate);
+console.log("is it the same date of my birthday? -->", isTheSameDate);
+
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
