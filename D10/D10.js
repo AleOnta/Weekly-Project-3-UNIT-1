@@ -529,6 +529,7 @@ const idSelector = () => {
 console.log("------------------------------------- Exercise 21 ------------------------------------");
 const tdSelector = () => {
   return document.getElementsByTagName("td");
+  //return document.querySelectorAll("td")
 };
 
 /* ESERCIZIO 22
@@ -537,7 +538,8 @@ const tdSelector = () => {
 console.log("------------------------------------- Exercise 22 ------------------------------------");
 
 const tdPrinter = () => {
-  const tdArray = document.getElementsByTagName("td");
+  const tdCollection = document.getElementsByTagName("td");
+  const tdArray = Array.from(tdCollection);
   tdArray.forEach((element) => {
     console.log(element.value);
   });
@@ -547,14 +549,15 @@ const tdPrinter = () => {
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 console.log("------------------------------------- Exercise 23 ------------------------------------");
-/*
+
 const redPainter = () => {
-  const myAnchorArray = document.getElementsByTagName("a")
-  myAnchorArray.forEach(element => {
-    element.style.background-color = red;
+  const myAnchorCollection = document.getElementsByTagName("a");
+  const myAnchorArray = Array.from(myAnchorCollection);
+  myAnchorArray.forEach((element) => {
+    element.style.backgroundColor = red;
   });
-}
-*/
+};
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
@@ -569,13 +572,22 @@ const listItem = () => {
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 console.log("------------------------------------- Exercise 25 ------------------------------------");
+
+const myEmptyList = () => {
+  let myEmptyList = document.getElementById("myList");
+  while (myEmptyList.firstChild) {
+    myEmptyList.removeChild(myEmptyList.firstChild);
+  }
+};
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 console.log("------------------------------------- Exercise 26 ------------------------------------");
 
 const addAClass = () => {
-  myTrArray = document.getElementsByTagName("tr");
+  const myTrCollection = document.getElementsByTagName("tr");
+  const myTrArray = Array.from(myTrCollection);
   myTrArray.forEach((element) => {
     element.classList.add(".test");
   });
