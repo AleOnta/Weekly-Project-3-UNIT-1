@@ -683,6 +683,22 @@ halftree(5);
 
 */
 console.log("------------------------------------- Exercise 28 ------------------------------------");
+
+const fullTree = (height) => {
+  for (let i = 1; i <= height; i++) {
+    let str = new String();
+    for (let space = 1; space <= height - i; space++) {
+      str += " ";
+    }
+    for (let star = 1; star <= i * 2 - 1; star++) {
+      str += "*";
+    }
+    console.log(str);
+  }
+};
+
+fullTree(10);
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
