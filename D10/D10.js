@@ -477,21 +477,21 @@ const sumAllTheYears = (array) => {
 
 const sumOfAllYears = sumAllTheYears(moviesYears);
 console.log("The sum of all years is:", sumOfAllYears);
+
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 console.log("------------------------------------- Exercise 17 ------------------------------------");
 
 const searchByTitle = (title) => {
-  movies.filter((element) => {
-    const searchedByTitle = element.Title == title;
-    if (searchedByTitle === true) {
-      console.log(element);
-    }
+  let filteredMovies = movies.filter((element) => {
+    return element.Title == title;
   });
+  return filteredMovies;
 };
 
-const searchedByTitle = searchByTitle("The Avengers");
+const searchedByTitle = searchByTitle("Avengers: Endgame");
+console.log(searchedByTitle);
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
