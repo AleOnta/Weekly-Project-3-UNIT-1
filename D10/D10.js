@@ -100,6 +100,7 @@ const whoIsBigger = function (n1, n2) {
     return n1;
   } else if (n1 === n2) {
     console.log("these numbers are equals");
+    return n1;
   } else {
     console.log(n2, "it's bigger then", n1);
     return n2;
@@ -657,6 +658,19 @@ console.log("Wont be displayed cause there's no actual interaction with a DOM");
 
 */
 console.log("------------------------------------- Exercise 27 ------------------------------------");
+
+const halftree = (n) => {
+  for (let i = 1; i <= n; i++) {
+    let str = new String();
+    for (let j = 1; j <= i; j++) {
+      str += "*";
+    }
+    console.log(str);
+  }
+};
+
+halftree(5);
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
