@@ -87,7 +87,7 @@ const dice = function () {
   return Math.floor(Math.random() * 6 + 1);
 };
 
-console.log(dice());
+console.log("your random number is:", dice());
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -167,7 +167,7 @@ console.log("------------------------------------- Exercise 6 ------------------
 const isThisAnEmail = function (input) {
   const re =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  console.log(re.test(String(input).toLowerCase()));
+  console.log("is this a valid e-mail address?", re.test(String(input).toLowerCase()));
 };
 
 isThisAnEmail("ale-email@email.com");
@@ -400,6 +400,26 @@ const movies = [
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 console.log("------------------------------------- Exercise 11 ------------------------------------");
+
+const itsMe = {
+  name: "Alessandro",
+  lastname: "Ontani",
+  age: 23,
+  interests: ["coding", "photography", "gaming", "football"],
+};
+
+const deleteProp = (object, toDelete) => {
+  if (object[toDelete] === true) {
+    delete object[toDelete];
+    return object;
+  } else {
+    console.log("there is no property named as -->", toDelete + ".");
+    console.log("please, check the value you inserted and fix it to make the function work properly");
+  }
+};
+
+const updatedObject = deleteProp(itsMe, "school");
+console.log(updatedObject);
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
