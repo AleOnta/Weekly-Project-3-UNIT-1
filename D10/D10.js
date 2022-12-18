@@ -669,7 +669,7 @@ const halftree = (n) => {
   }
 };
 
-halftree(5);
+halftree(10);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -702,7 +702,16 @@ fullTree(10);
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+console.log("------------------------------------- Exercise 29 ------------------------------------");
+
+const isItPrime = (number) => {
+  if (number / 1 === number && number % 2 !== 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log("is it prime?:", isItPrime(97));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
-
-console.log("------------------------------------- Exercise 29 ------------------------------------");
