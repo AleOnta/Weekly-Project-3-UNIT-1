@@ -704,14 +704,13 @@ fullTree(10);
 */
 console.log("------------------------------------- Exercise 29 ------------------------------------");
 
-const isItPrime = (number) => {
-  if (number / 1 === number && number % 2 !== 0) {
-    return true;
-  } else {
-    return false;
-  }
+const isItPrime = (n) => {
+  if (n <= 1) return false;
+
+  for (let i = 2; i < n; i++) if (n % i == 0) return false;
+  return true;
 };
 
-console.log("is it prime?:", isItPrime(97));
+console.log("is it prime?", isItPrime(11));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
