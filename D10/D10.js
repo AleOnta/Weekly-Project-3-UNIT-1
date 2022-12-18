@@ -403,14 +403,14 @@ const movies = [
 console.log("------------------------------------- Exercise 11 ------------------------------------");
 
 const itsMe = {
-  name: "Alessandro",
+  firstname: "Alessandro",
   lastname: "Ontani",
   age: 23,
   interests: ["coding", "photography", "gaming", "football"],
 };
 
 const deleteProp = (object, toDelete) => {
-  if (object[toDelete] === true) {
+  if (object[toDelete] !== undefined) {
     delete object[toDelete];
     return object;
   } else {
@@ -419,7 +419,7 @@ const deleteProp = (object, toDelete) => {
   }
 };
 
-const updatedObject = deleteProp(itsMe, "school");
+const updatedObject = deleteProp(itsMe, "firstname");
 console.log(updatedObject);
 
 /* ESERCIZIO 12
